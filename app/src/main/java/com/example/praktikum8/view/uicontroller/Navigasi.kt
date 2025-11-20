@@ -11,6 +11,16 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.navigasiui.view.FormIsian
+import com.example.praktikum8.model.DataJK.JenisK
+import com.example.praktikum8.view.TampilData
+import com.example.praktikum8.viewmodel.SiswaViewModel
+
+enum class Navigasi {
+    Formulirku,
+
+    Detail
+}
 
 @Composable
 fun DataApp(
@@ -46,4 +56,11 @@ fun DataApp(
             }
         }
     }
+}
+
+private fun cancelAndBackToFormulirku(
+    navController: NavHostController
+){
+    navController.popBackStack(Navigasi.Formulirku.name,
+        inclusive = false)
 }
