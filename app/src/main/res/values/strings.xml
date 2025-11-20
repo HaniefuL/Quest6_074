@@ -1,2 +1,4 @@
 <resources>
+    <string name="app_name">praktikum8</string>
+    <string name="submit">submit</string>
 </resources>
